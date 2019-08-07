@@ -1,0 +1,31 @@
+<h1>Enter Form Data</h1>
+
+{{config | json}}
+
+    <div class="form-group">
+      <label>Screen Headline</label>
+      <input class="form-control" placeholder="Screen Headline"  [(ngModel)]="config['title']" >
+    </div>
+
+    <div class="form-group">
+      <label>Task-Type</label>
+      <select class="form-control"  [(ngModel)]="config['task-type']"  >
+        <option value="blurb">blurb</option>
+        <option value="iframe">iframe</option>
+        <option value="external-link">external link</option>
+        <option value="quiz">quiz</option>
+        <option value="questionnaire">questionnaire</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Enter Blurb Text Here</label>
+      <textarea class="form-control"  placeholder="screen text" 
+                cols="40" rows="5" #content></textarea>
+    </div>
+    <button (click)="append(content.value)">append content</button>
+
+    <div class="form-group">
+      <label>URL</label>  
+      <input class="form-control" placeholder="URL"  [(ngModel)]="config['url']">
+    </div>
