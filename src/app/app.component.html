@@ -1,31 +1,45 @@
-<h1>Enter Form Data</h1>
+<h4>you can do this lovely </h4>
 
-{{config | json}}
+<div class="box flex">
+  <!-- <pre>{{GOAL   | json}}</pre> -->
+  <!-- <pre>{{task | json}}</pre> -->
+  <!-- <pre>{{config | json}}</pre> -->
+  2, E'{{config | json}}'),
+</div>
+
+<!-- 
+    <div class="form-group">
+      <label>Task-Type</label>
+      <select class="form-control" #taskType [(ngModel)]="task[taskType]">
+        <option value="CONTENT">CONTENT</option>
+        <option value="QUIZ">QUIZ</option>
+        <option value="QUESTIONNAIRE">QUESTIONNAIRE</option>
+      </select>
+    </div> -->
 
     <div class="form-group">
       <label>Screen Headline</label>
       <input class="form-control" placeholder="Screen Headline"  [(ngModel)]="config['title']" >
     </div>
 
-    <div class="form-group">
+<h3> task-pages </h3>
+    <div class="form-group" style="border:dotted">
       <label>Task-Type</label>
-      <select class="form-control"  [(ngModel)]="config['task-type']"  >
-        <option value="blurb">blurb</option>
+      <select class="form-control"  [(ngModel)]="task['type']"  >
+        <option value="blurb">text</option>
         <option value="iframe">iframe</option>
-        <option value="external-link">external link</option>
-        <option value="quiz">quiz</option>
-        <option value="questionnaire">questionnaire</option>
+        <option value="external">external link</option>
+        <option value="vault">vault</option>
       </select>
-    </div>
-
-    <div class="form-group">
-      <label>Enter Blurb Text Here</label>
+      <label>CONTENT (html for rich text)</label>
       <textarea class="form-control"  placeholder="screen text" 
-                cols="40" rows="5" #content></textarea>
-    </div>
-    <button (click)="append(content.value)">append content</button>
-
-    <div class="form-group">
+                cols="40" rows="5" #BODY ></textarea>
       <label>URL</label>  
-      <input class="form-control" placeholder="URL"  [(ngModel)]="config['url']">
+      <input class="form-control" placeholder="URL"  [(ngModel)]="task['url']">
+      <button (click)="addPage(BODY.value)">addPage</button>
     </div>
+
+<br><br>
+<button (click)="clear()" >Clear Config</button>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

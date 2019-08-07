@@ -4,3 +4,8 @@
 p {
   font-family: Lato;
 }
+
+.box.flex {
+  display: flex;
+  justify-content: center;
+}
